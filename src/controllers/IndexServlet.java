@@ -43,8 +43,8 @@ public class IndexServlet extends HttpServlet {
         }
 
         List<Task> tasks = em.createNamedQuery("getAllTasks", Task.class)
-                .setFirstResult(10 * (page - 1))
-                .setMaxResults(10)
+                .setFirstResult(15 * (page - 1))
+                .setMaxResults(15)
                 .getResultList();
 
         long tasks_count = (long) em.createNamedQuery("getTasksCount", Long.class)
